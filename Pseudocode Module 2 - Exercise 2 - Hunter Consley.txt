@@ -1,0 +1,20 @@
+// This program determines a monthly checking account
+// fee for an account with Hometown Bank
+
+START
+    Declarations
+        num accountBalance
+        num overDrawnFee
+        num timesOverDrawn
+        num newAccountBalance
+        num OVERDRAWN_MULTIPLIER = 5
+        num BASE_OVERDRAWN_CHARGE = 0.01
+    INPUT accountBalance
+    INPUT timesOverDrawn
+    overDrawnFee = accountBalance * BASE_OVERDRAWN_CHARGE - 
+        timesOverDrawn * OVERDRAWN_MULTIPLIER
+    newAccountBalance = accountBalance - overDrawnFee
+    OUTPUT overDrawnFee
+    OUTPUT newAccountBalance
+    OUTPUT "Thanks for using this program."
+STOP

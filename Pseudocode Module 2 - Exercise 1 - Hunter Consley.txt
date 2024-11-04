@@ -1,0 +1,27 @@
+// This program calculates a refrigerator's capacity
+//in cubic feet after accepting the model name and 
+//interior measurements in inches.
+
+START
+    Declarations
+        string refrigeratorModelName
+        num fridgeHeight
+        num fridgeWidth
+        num fridgeDepth
+        num fridgeCapacityInches
+        num fridgeCapacityFeet
+        num CUBIC_FEET_CONVERSION_FACTOR = 1728
+
+    OUTPUT "Please enter the model name of your refrigerator."
+    INPUT refrigeratorModelName
+    OUTPUT "Please enter the height, width, and depth of your refrigerator in inches."
+    INPUT fridgeHeight
+    INPUT fridgeWidth
+    INPUT fridgeDepth
+    fridgeCapacityInches = fridgeHeight * fridgeWidth * fridgeDepth
+    fridgeCapacityFeet = fridgeCapacityInches / CUBIC_FEET_CONVERSION_FACTOR
+    OUTPUT "Your refrigerator's model name is:"
+    OUTPUT refrigeratorModelName
+    OUTPUT "Your refrigerator's capacity in cubic feet is:"
+    OUTPUT fridgeCapacityFeet
+STOP
